@@ -20,12 +20,10 @@ class Program
                 Console.WriteLine("  add - add employee to the system.");
                 Console.WriteLine("  exit - exit the program.");
             }
-            
-            if (input.ToLower() == "list")
+            else if (input.ToLower() == "list")
             {
                 Commands.ListEmployees();
             }
-            
             else if (input.ToLower() == "add")
             {
                 Commands.AddEmployee();
