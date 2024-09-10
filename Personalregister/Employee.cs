@@ -1,20 +1,20 @@
 ﻿namespace Personalregister;
 
 public class Employee{
-    private string firstName;
-    private string lastName;
-    private Int32 salary;
+    private string FirstName { get; set; }
+    private string LastName { get; set; }
+    private Int32 Salary { get; set; }
 
-    public Employee(string firstName, string lastName, Int32 salary)
+    public Employee(string firstName, string lastName, int salary)
     {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.salary = salary;
+        FirstName = firstName;
+        LastName = lastName;
+        Salary = salary;
     }
 
     public void PrintEmployee()
     {
-        Console.WriteLine($"\nName: {firstName} {lastName}");
-        Console.WriteLine($"Salary: {salary}kr");
+        Console.WriteLine($"\nName: {FirstName} {LastName}");
+        Console.WriteLine($"Salary: {Salary}kr");
     }
 }
