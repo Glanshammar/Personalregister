@@ -8,25 +8,22 @@ class Program
         {
             Console.Write(">> ");
             string input = Console.ReadLine() ?? string.Empty;
-            if (input == "exit")
+            switch (input)
             {
-                break;
-            }
-
-            if (input == "help")
-            {
-                Console.WriteLine("Commands:");
-                Console.WriteLine("  list - list all employees.");
-                Console.WriteLine("  add - add employee to the system.");
-                Console.WriteLine("  exit - exit the program.");
-            }
-            else if (input.ToLower() == "list")
-            {
-                Commands.ListEmployees();
-            }
-            else if (input.ToLower() == "add")
-            {
-                Commands.AddEmployee();
+                case "exit":
+                    return;
+                case "help":
+                    Commands.PrintHelp();
+                    break;
+                case "list":
+                    Commands.ListEmployees();
+                    break;
+                case "add":
+                    Commands.AddEmployee();
+                    break;
+                default:
+                    Console.WriteLine("Unknown command. Type 'help' for a list of commands.");
+                    break;
             }
         }
     }
