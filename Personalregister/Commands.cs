@@ -4,6 +4,14 @@ public class Commands
 {
     static List<Employee> employees = new List<Employee>();
     
+    public static void PrintHelp()
+    {
+        Console.WriteLine("Commands:");
+        Console.WriteLine("  list   - List all employees.");
+        Console.WriteLine("  add    - Add employee to the system.");
+        Console.WriteLine("  exit   - Exit the program.");
+    }
+    
     public static void ListEmployees()
     {
         if (!employees.Any())
