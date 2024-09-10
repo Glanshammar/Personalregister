@@ -1,18 +1,20 @@
-﻿public class Employee{
-    private static string firstName;
-    private static string lastName;
-    private static Int32 salary;
+﻿namespace Personalregister;
 
-    Employee(string firstName, string lastName, Int32 salary)
+public class Employee{
+    private string firstName;
+    private string lastName;
+    private Int32 salary;
+
+    public Employee(string firstName, string lastName, Int32 salary)
     {
-        firstName = firstName;
-        lastName = lastName;
-        salary = salary;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.salary = salary;
     }
 
-    public static void PrintEmployee()
+    public void PrintEmployee()
     {
-        Console.WriteLine("\nEmployee Information:");
-        Console.WriteLine("First Name: {0}", firstName);
+        Console.WriteLine($"\nName: {firstName} {lastName}");
+        Console.WriteLine($"Salary: {salary}kr");
     }
 }
