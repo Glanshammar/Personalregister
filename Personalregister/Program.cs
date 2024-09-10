@@ -7,7 +7,7 @@ class Program
         while (true)
         {
             Console.Write(">> ");
-            string input = Console.ReadLine() ?? string.Empty;
+            string input = Console.ReadLine()?.Trim() ?? string.Empty;
             switch (input)
             {
                 case "exit":
