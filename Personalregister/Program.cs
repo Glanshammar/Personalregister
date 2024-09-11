@@ -12,6 +12,8 @@ class Program
     
     static void Main(string[] args)
     {
+        EmployeeList employeeList = new EmployeeList();
+        
         while (true)
         {
             Console.Write(">> ");
@@ -24,10 +26,10 @@ class Program
                     PrintHelp();
                     break;
                 case "list":
-                    Commands.ListEmployees();
+                    employeeList.ListEmployees();
                     break;
                 case "add":
-                    Commands.AddEmployee();
+                    employeeList.AddEmployee();
                     break;
                 default:
                     Console.WriteLine("Unknown command. Type 'help' for a list of commands.");
