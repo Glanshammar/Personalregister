@@ -2,6 +2,14 @@
 
 class Program
 {
+    public static void PrintHelp()
+    {
+        Console.WriteLine("Commands:");
+        Console.WriteLine("  list   - List all employees.");
+        Console.WriteLine("  add    - Add employee to the system.");
+        Console.WriteLine("  exit   - Exit the program.");
+    }
+    
     static void Main(string[] args)
     {
         while (true)
@@ -13,7 +21,7 @@ class Program
                 case "exit":
                     return;
                 case "help":
-                    Commands.PrintHelp();
+                    PrintHelp();
                     break;
                 case "list":
                     Commands.ListEmployees();
