@@ -10,6 +10,7 @@ class Program
         Console.WriteLine("  exit   - Exit the program.");
     }
     
+    
     static void Main(string[] args)
     {
         EmployeeList employeeList = new EmployeeList();

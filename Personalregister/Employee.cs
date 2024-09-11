@@ -69,7 +69,8 @@ public class EmployeeList{
             }
             Console.WriteLine($"\nTotal employees: {employees.Count}");
         }
-    }
+}
+
 
 public class Employee{
     private string FirstName { get; set; }
